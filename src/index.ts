@@ -24,7 +24,7 @@ import EventPond from './emiter';
 import debounce from './debounce';
 import throttle from './throttle';
 import ArrayTools from './array';
-import './instanceof'
+import './nextTick'
 export default  {
     EventPond,
     debounce,

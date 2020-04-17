@@ -1,16 +1,17 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+console.log(path.resolve(__dirname,'../src'))
 module.exports = {
    entry:{
-    main:'./src/index.ts'
+    main:'./index.ts'
    },
    resolve: {
-    extensions: ['.tsx', '.ts', '.js']
+    extensions: ['.tsx', '.ts', '.js'],
+    alias:{
+        '@':path.resolve(__dirname,'../src')
+     }
    },
-   externals:{
-        _:'lodash',
-        react:'react'
-   },
+   externals:{ },
    module:{
        rules:[
         {
@@ -22,7 +23,7 @@ module.exports = {
    },
    plugins:[
     new HtmlWebpackPlugin({
-        template: path.resolve(__dirname, '../src/index.html')
+        template: path.resolve(__dirname, '../index.html')
     })
    ]
 }

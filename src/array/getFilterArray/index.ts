@@ -1,5 +1,9 @@
-// 数组多条件去重复
-export default function mutipleConditionFilterArray(arr, ...condtions){
+/**
+ * @desc 数组多条件去重
+ * @param arr 
+ * @param condtions 
+ */
+export const getFilterArray = (arr, ...condtions)=>{
     // pop first condition
     const curCondition = condtions.shift();
     // get first condition key
@@ -19,5 +23,5 @@ export default function mutipleConditionFilterArray(arr, ...condtions){
       return res;
     }
     // recursion with this res and remains condition
-    return mutipleConditionFilterArray(res,...condtions)
+    return getFilterArray(res,...condtions)
 }

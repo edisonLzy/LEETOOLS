@@ -1,4 +1,4 @@
-import currying from '../../curry';
+import {currying} from '../index';
 interface checkedFn{
      isBoolean?:(value:any)=>boolean;
      isString?:(value:any)=>boolean;
